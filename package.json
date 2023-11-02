@@ -1,0 +1,48 @@
+{
+  "name": "mini-typst",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "author": "satoqz",
+  "publisher": "satoqz",
+  "displayName": "Minimal Typst Support",
+  "description": "Syntax highlighting + file icon for Typst, as an alternative to the full-blown LSP extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satoqz/vscode-mini-typst"
+  },
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "typst",
+        "aliases": [
+          "typst",
+          "Typst"
+        ],
+        "extensions": [
+          ".typ"
+        ],
+        "configuration": "./config.json",
+        "icon": {
+          "light": "./typst.svg",
+          "dark": "./typst.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "typst",
+        "scopeName": "source.typst",
+        "path": "./typst.tmLanguage.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[typst]": {
+        "editor.wordWrap": "on",
+        "editor.tabSize": 2
+      }
+    }
+  }
+}
